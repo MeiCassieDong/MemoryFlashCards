@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">记忆单词卡</string>
+
+    <string name="start_new_game">开始游戏</string>
+    <string name="add_cards">添加卡片</string>
+    <string name="manage_cards">管理卡片</string>
+    <string name="save">保存</string>
+</resources>

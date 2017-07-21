@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dragonwarrior.memorycard.fragment.NewGameFragment">
+
+    <dragonwarrior.memorycard.view.CardGridView
+        android:id="@+id/cardGridView"
+        android:numColumns="3"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:listSelector="@android:color/transparent"
+        android:gravity="center">
+    </dragonwarrior.memorycard.view.CardGridView>
+</RelativeLayout>

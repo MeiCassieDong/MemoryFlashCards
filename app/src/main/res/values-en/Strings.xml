@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Memory Flashcards</string>
+
+    <string name="start_new_game">Start Memory Game</string>
+    <string name="add_cards">Add Cards</string>
+    <string name="manage_cards">Manage Cards</string>
+    <string name="save">Save</string>
+</resources>

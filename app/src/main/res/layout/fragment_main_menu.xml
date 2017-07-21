@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/notebook"
+    tools:context="dragonwarrior.memorycard.fragment.MainMenuFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+    <Button
+        android:id="@+id/addNewCard"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/add_cards"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button" />
+
+    <Button
+        android:id="@+id/manageCards"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_cards"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/startNewGameButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/start_new_game"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</FrameLayout>

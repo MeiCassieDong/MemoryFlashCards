@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Flashcards fai da te</string>
+
+    <string name="start_new_game">Comincia nuova partita</string>
+    <string name="add_cards">Aggiungi carte</string>
+    <string name="manage_cards">Gestisci carte</string>
+    <string name="save">Salva</string>
+    <string name="write_card_a">Scrivi carta A</string>
+    <string name="write_card_b">Scrivi carta B</string>
+</resources>

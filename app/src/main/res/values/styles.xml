@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme">
+    </style>
+
+    <style name="CustomButtonStyle">
+        android:layout_gravity="center"
+        android:background="@drawable/custom_button"
+        android:textAlignment="center"
+        android:layout_marginTop="70dp"
+    </style>
+
+</resources>

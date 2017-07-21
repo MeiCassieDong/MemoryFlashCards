@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dragonwarrior.memorycard.view.CardItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="@dimen/card_width_length"
+    android:layout_height="@dimen/card_width_length">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="@dimen/card_width_length"
+        android:layout_height="@dimen/card_width_length"
+        android:layout_gravity="center"
+        android:src="@drawable/background" />
+
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="@dimen/card_width_length"
+        android:layout_height="@dimen/card_width_length"
+        android:background="@drawable/custom_card"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            />
+    </FrameLayout>
+
+</dragonwarrior.memorycard.view.CardItemView>
