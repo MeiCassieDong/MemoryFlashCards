@@ -6,6 +6,7 @@ import android.widget.GridView;
 
 import java.util.List;
 
+import dragonwarrior.memorycard.MemoryGameEngine;
 import dragonwarrior.memorycard.model.DataPair;
 import dragonwarrior.memorycard.model.DataStorage;
 
@@ -17,6 +18,7 @@ public class CardGridView extends GridView {
         super(context, attrs);
         m_context = context;
         m_dataPairs = new DataStorage(context).getGameDatas();
+        MemoryGameEngine.getInstance().initialGame(m_dataPairs.size());
     }
 
     public CardGridView(Context context, AttributeSet attrs, int defStyleAttr) {

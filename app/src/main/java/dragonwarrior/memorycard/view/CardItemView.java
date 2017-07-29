@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 
-import dragonwarrior.memorycard.GameEngine;
+import dragonwarrior.memorycard.MemoryGameEngine;
 import dragonwarrior.memorycard.R;
 import dragonwarrior.memorycard.model.DataPair;
 
@@ -18,7 +18,7 @@ public class CardItemView extends FrameLayout {
     private TextView m_content;
     private View m_container;
     private boolean isClickable = true;
-    private GameEngine m_gameEngine;
+    private MemoryGameEngine m_gameEngine;
     private DataPair m_dataPair;
     private View m_contentContainer;
 
@@ -51,7 +51,7 @@ public class CardItemView extends FrameLayout {
         super.onFinishInflate();
         if (isInEditMode()) return;
         initView();
-        m_gameEngine = GameEngine.getInstance();
+        m_gameEngine = MemoryGameEngine.getInstance();
     }
 
     public void closeCard() {
@@ -76,8 +76,8 @@ public class CardItemView extends FrameLayout {
         });
     }
 
-    private void compareCard() {
-        m_gameEngine.setCardItemView(this);
+    private void cardIsClicked() {
+        m_gameEngine.handleClickedCard(this);
     }
 
     private void showContent() {
@@ -86,7 +86,7 @@ public class CardItemView extends FrameLayout {
         (new Handler()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                compareCard();
+                cardIsClicked();
             }
         }, (long) 1000);
         isClickable = false;
