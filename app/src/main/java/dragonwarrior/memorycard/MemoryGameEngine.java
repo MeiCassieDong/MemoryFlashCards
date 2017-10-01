@@ -1,5 +1,8 @@
 package dragonwarrior.memorycard;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
 import dragonwarrior.memorycard.view.CardItemView;
 
 public class MemoryGameEngine {
@@ -29,7 +32,7 @@ public class MemoryGameEngine {
                 m_firstClickedCard.closeCard();
                 m_secondClickedCard.closeCard();
             } else {
-                m_cardsCount = m_cardsCount - 2;
+                m_cardsCount = m_cardsCount - 1;
             }
             m_firstClickedCard = m_secondClickedCard = null;
 
@@ -38,7 +41,22 @@ public class MemoryGameEngine {
             m_secondClickedCard = null;
         }
 
-        return  m_cardsCount > 0;
+        boolean gameIsNotOver = m_cardsCount > 0;
+
+        if (!gameIsNotOver) {
+            new AlertDialog.Builder(cardItemView.getContext())
+                    .setTitle(R.string.congratulations)
+                    .setPositiveButton(R.string.continue_play, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+
+                        }
+                    })
+                    .create().show();
+        }
+
+        return  gameIsNotOver;
     }
 
     public void initialGame(int size) {

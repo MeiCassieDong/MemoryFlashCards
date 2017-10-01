@@ -6,4 +6,6 @@
     <string name="add_cards">Add Cards</string>
     <string name="manage_cards">Manage Cards</string>
     <string name="save">Save</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="continue_play">Continue Play</string>
 </resources>

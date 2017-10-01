@@ -6,4 +6,6 @@
     <string name="add_cards">添加卡片</string>
     <string name="manage_cards">管理卡片</string>
     <string name="save">保存</string>
+    <string name="congratulations">恭喜过关！</string>
+    <string name="continue_play">继续游戏</string>
 </resources>
