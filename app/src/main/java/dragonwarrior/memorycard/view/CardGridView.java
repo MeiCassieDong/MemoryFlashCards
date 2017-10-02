@@ -17,8 +17,8 @@ public class CardGridView extends GridView {
     public CardGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
         m_context = context;
-        m_dataPairs = new DataStorage(context).getGameDatas();
-        MemoryGameEngine.getInstance().initialGame(m_dataPairs.size());
+        m_dataPairs = new DataStorage(m_context).getGameDatas();
+        MemoryGameEngine.getInstance().initialGame(m_dataPairs.size(), this);
     }
 
     public CardGridView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -30,8 +30,14 @@ public class CardGridView extends GridView {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        if (m_dataPairs != null) {
-            setAdapter(new CardGridAdapter(m_context, m_dataPairs));
-        }
+        setAdapter(new CardGridAdapter(m_context, m_dataPairs));
+
     }
+
+    public void restartGame() {
+        m_dataPairs = new DataStorage(m_context).getGameDatas();
+        setAdapter(new CardGridAdapter(m_context, m_dataPairs));
+        MemoryGameEngine.getInstance().initialGame(m_dataPairs.size(), this);
+    }
+
 }

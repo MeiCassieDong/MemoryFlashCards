@@ -3,6 +3,7 @@ package dragonwarrior.memorycard;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
+import dragonwarrior.memorycard.view.CardGridView;
 import dragonwarrior.memorycard.view.CardItemView;
 
 public class MemoryGameEngine {
@@ -10,6 +11,7 @@ public class MemoryGameEngine {
     private CardItemView m_firstClickedCard;
     private CardItemView m_secondClickedCard;
     private int m_cardsCount;
+    private CardGridView m_cardGridView;
 
     private MemoryGameEngine() {
     }
@@ -49,8 +51,7 @@ public class MemoryGameEngine {
                     .setPositiveButton(R.string.continue_play, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
-
+                            m_cardGridView.restartGame();
                         }
                     })
                     .create().show();
@@ -59,7 +60,8 @@ public class MemoryGameEngine {
         return  gameIsNotOver;
     }
 
-    public void initialGame(int size) {
+    public void initialGame(int size, CardGridView cardGridView) {
         m_cardsCount = size;
+        m_cardGridView = cardGridView;
     }
 }
