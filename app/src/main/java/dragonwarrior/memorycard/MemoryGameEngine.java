@@ -48,6 +48,7 @@ public class MemoryGameEngine {
         if (!gameIsNotOver) {
             new AlertDialog.Builder(cardItemView.getContext())
                     .setTitle(R.string.congratulations)
+                    .setIcon(R.mipmap.mei_flower)
                     .setPositiveButton(R.string.continue_play, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
