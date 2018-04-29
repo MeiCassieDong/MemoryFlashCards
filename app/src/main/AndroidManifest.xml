@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".MainActivity"
             android:configChanges="orientation"
-            android:theme="@android:style/Theme.NoTitleBar"
+            android:theme="@style/Theme.AppCompat"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
